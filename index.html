@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Photo Booth</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="app">
+
+        <h1>📸 Capture your perfect day</h1>
+
+        <p class="subtitle">
+            Take a picture, choose a filter, and download it.
+        </p>
+
+                 <!-- camera  -->
+
+        <div class="booth">
+
+            <video
+                id="camera"
+                autoplay
+                playsinline
+            ></video>
+
+            <canvas id="canvas"></canvas>
+
+            <div id="countdown"></div>
+
+        </div>
+
+
+        <!-- buttons -->
+
+        <div class="buttons">
+
+            <button id="startCamera">
+                 Start Camera
+            </button>
+
+            <button id="takePhoto" disabled>
+        Take Photo
+            </button>
+
+            <button id="retake" disabled>
+             Retake
+            </button>
+
+            <button id="download" disabled>
+                   Download
+            </button>
+
+        </div>
+
+
+        <!-- filters   -->
+
+        <section>
+
+            <h2>Filters</h2>
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-filter="none"
+                >
+                      Normal
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-filter="grayscale"
+                >
+                    B&W
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-filter="sepia"
+                >
+                        Vintage
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-filter="bright"
+                >
+                 Bright
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
