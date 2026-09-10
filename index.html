@@ -10,110 +10,215 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Photo Booth</title>
+    <title>Photo Booth — Snap the Moment</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="landing.css">
 
 </head>
 
-
 <body>
 
-    <main class="app">
+    <header class="site-header">
 
-        <h1>📸 Capture your perfect day</h1>
+        <div class="nav-inner">
 
-        <p class="subtitle">
-            Take a picture, choose a filter, and download it.
-        </p>
+            <a class="logo" href="#">📸 Photo Booth For a Perfect Day</a>
 
-                 <!-- camera  -->
+            <nav class="site-nav" id="siteNav">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#gallery">Gallery</a>
+                <a class="nav-cta" href="booth.html">Start</a>
+            </nav>
 
-        <div class="booth">
-
-            <video
-                id="camera"
-                autoplay
-                playsinline
-            ></video>
-
-            <canvas id="canvas"></canvas>
-
-            <div id="countdown"></div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
 
         </div>
 
+    </header>
 
-        <!-- buttons -->
+    <main>
 
-        <div class="buttons">
+        <!-- hero -->
 
-            <button id="startCamera">
-                 Start Camera
-            </button>
+        <section id="hero" class="hero">
 
-            <button id="takePhoto" disabled>
-        Take Photo
-            </button>
+            <div class="hero-text reveal">
 
-            <button id="retake" disabled>
-             Retake
-            </button>
+                <h1>Strike a Pose.<br>Make a Memory.</h1>
 
-            <button id="download" disabled>
-                   Download
-            </button>
+                <p class="hero-subtitle">
+                    Your free, no-download photo booth. Pick a filter, hit the
+                    countdown, and walk away with a keepsake in seconds.
+                </p>
 
-        </div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="booth.html">Try the Photobooth</a>
+                    <a class="btn btn-ghost" href="#how-it-works">See How It Works</a>
+                </div>
 
+            </div>
 
-        <!-- filters   -->
+            <div class="hero-visual reveal">
 
-        <section>
+                <div class="polaroid-card" style="--rotate: -6deg;">
+                    <div class="polaroid-photo photo-1">🥳</div>
+                    <p class="polaroid-caption">besties forever</p>
+                </div>
 
-            <h2>Filters</h2>
+                <div class="polaroid-card" style="--rotate: 4deg;">
+                    <div class="polaroid-photo photo-3">💕</div>
+                    <p class="polaroid-caption">squad goals</p>
+                </div>
 
-            <div class="filters">
-
-                <button
-                    class="filter active"
-                    data-filter="none"
-                >
-                      Normal
-                </button>
-
-
-                <button
-                    class="filter"
-                    data-filter="grayscale"
-                >
-                    B&W
-                </button>
-
-
-                <button
-                    class="filter"
-                    data-filter="sepia"
-                >
-                        Vintage
-                </button>
-
-
-                <button
-                    class="filter"
-                    data-filter="bright"
-                >
-                 Bright
-                </button>
+                <div class="polaroid-card" style="--rotate: -2deg;">
+                    <div class="polaroid-photo photo-5">🎉</div>
+                    <p class="polaroid-caption">good vibes only</p>
+                </div>
 
             </div>
 
         </section>
 
+        <!-- features -->
+
+        <section id="features" class="features">
+
+            <h2 class="reveal">Everything You Need for the Perfect Shot</h2>
+
+            <div class="feature-grid">
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Instant Camera</h3>
+                    <p>Starts right in your browser, no app required.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>3-2-1 Countdown</h3>
+                    <p>Get ready, strike your pose, snap.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Fun Filters</h3>
+                    <p>Black &amp; white, vintage, or bright — pick your vibe.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <div class="feature-icon">⬇️</div>
+                    <h3>One-Tap Download</h3>
+                    <p>Save your polaroid instantly, keep it forever.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- how it works -->
+
+        <section id="how-it-works" class="how-it-works">
+
+            <h2 class="reveal">How It Works</h2>
+
+            <div class="steps-list">
+
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <h3>Allow Camera</h3>
+                    <p>Give your browser a quick nod to turn on the webcam.</p>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <h3>Strike a Pose</h3>
+                    <p>Choose a filter, wait for the countdown, smile.</p>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <h3>Download &amp; Share</h3>
+                    <p>Grab your photo and send it to your friends.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- gallery -->
+
+        <section id="gallery" class="gallery">
+
+            <h2 class="reveal">A Sneak Peek</h2>
+            <p class="section-subtitle reveal">No two photobooth moments look the same.</p>
+
+            <div class="gallery-grid">
+
+                <div class="polaroid-card reveal" style="--rotate: -4deg;">
+                    <div class="polaroid-photo photo-1">🥳</div>
+                    <p class="polaroid-caption">besties forever</p>
+                </div>
+
+                <div class="polaroid-card reveal" style="--rotate: 3deg;">
+                    <div class="polaroid-photo photo-2">😂</div>
+                    <p class="polaroid-caption">can't stop laughing</p>
+                </div>
+
+                <div class="polaroid-card reveal" style="--rotate: -2deg;">
+                    <div class="polaroid-photo photo-3">💕</div>
+                    <p class="polaroid-caption">squad goals</p>
+                </div>
+
+                <div class="polaroid-card reveal" style="--rotate: 5deg;">
+                    <div class="polaroid-photo photo-4">🤳</div>
+                    <p class="polaroid-caption">say cheese</p>
+                </div>
+
+                <div class="polaroid-card reveal" style="--rotate: -3deg;">
+                    <div class="polaroid-photo photo-5">🎉</div>
+                    <p class="polaroid-caption">good vibes only</p>
+                </div>
+
+                <div class="polaroid-card reveal" style="--rotate: 2deg;">
+                    <div class="polaroid-photo photo-6">😎</div>
+                    <p class="polaroid-caption">iconic</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- final cta -->
+
+        <section id="final-cta" class="final-cta">
+
+            <h2 class="reveal">Ready for Your Close-Up?</h2>
+            <p class="reveal">No sign-up. No downloads. Just you, a camera, and a great filter.</p>
+
+            <a class="btn btn-primary btn-large reveal" href="booth.html">Start the Photobooth</a>
+
+        </section>
+
     </main>
 
+    <footer class="site-footer">
 
-    <script src="script.js"></script>
+        <p>© 2026 Photo Booth</p>
+
+        <nav class="footer-nav">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+
+    </footer>
+
+    <script src="landing.js"></script>
 
 </body>
 
